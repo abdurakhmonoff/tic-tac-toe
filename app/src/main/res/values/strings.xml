@@ -1,3 +1,22 @@
 <resources>
     <string name="app_name">Tic Tac Toe</string>
+    <string name="welcome">welcome</string>
+    <string name="start">start</string>
+    <string name="arrow_icon">Arrow icon</string>
+    <string name="exit">exit</string>
+    <string name="turn">turn</string>
+    <string name="who_first">Who first?</string>
+    <string name="game_mode">Game mode:</string>
+    <string name="single_player">single player</string>
+    <string name="multiplayer">multiplayer</string>
+    <string name="you">You:</string>
+    <string name="player_1_name">Player 1 name:</string>
+    <string name="player_2_name">Player 2 name:</string>
+    <string name="name">Name</string>
+    <string name="next">next</string>
+    <string name="enter_name_error_message">Please, enter name!</string>
+    <string name="result">result!</string>
+    <string name="retry">retry</string>
+    <string name="home">home</string>
+    <string name="winner">Winner:</string>
 </resources>

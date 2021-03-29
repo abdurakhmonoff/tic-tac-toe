@@ -1,0 +1,247 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/background_color"
+    tools:context=".ui.game.GameFragment"
+    tools:ignore="ContentDescription">
+
+    <TextView
+        android:id="@+id/player_1"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:fontFamily="@font/roboto"
+        app:layout_constraintBottom_toTopOf="@+id/game_board"
+        app:layout_constraintStart_toStartOf="@+id/game_board"
+        app:layout_constraintTop_toBottomOf="@+id/turn_container"
+        tools:text="Player 1: ×" />
+
+    <TextView
+        android:id="@+id/player_2"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:fontFamily="@font/roboto"
+        app:layout_constraintBaseline_toBaselineOf="@+id/player_1"
+        app:layout_constraintEnd_toEndOf="@+id/game_board"
+        tools:text="Player 2: o" />
+
+    <com.google.android.material.card.MaterialCardView
+        android:id="@+id/turn_container"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        app:layout_constraintBottom_toTopOf="@+id/game_board"
+        app:layout_constraintEnd_toEndOf="@+id/game_board"
+        app:layout_constraintStart_toStartOf="@+id/game_board"
+        app:layout_constraintTop_toTopOf="parent">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:orientation="vertical"
+            android:padding="16dp"
+            tools:ignore="UseCompoundDrawables">
+
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginBottom="16dp"
+                android:gravity="center"
+                android:text="@string/turn"
+                android:textAllCaps="true" />
+
+            <ImageView
+                android:id="@+id/turn"
+                android:layout_width="70dp"
+                android:layout_height="70dp"
+                app:layout_constraintBottom_toTopOf="@+id/game_board"
+                app:layout_constraintEnd_toEndOf="@+id/game_board"
+                app:layout_constraintStart_toStartOf="@+id/game_board"
+                app:layout_constraintTop_toTopOf="parent"
+                app:tint="@color/o_x_icon_color"
+                tools:src="@drawable/ic_o" />
+        </LinearLayout>
+    </com.google.android.material.card.MaterialCardView>
+
+    <LinearLayout
+        android:id="@+id/game_board"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:background="@color/game_board_bg_color"
+        android:orientation="vertical"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/turn_container">
+
+        <LinearLayout
+            android:id="@+id/row_1"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:clipChildren="false"
+            android:clipToPadding="false"
+            android:orientation="horizontal">
+
+            <com.google.android.material.card.MaterialCardView
+                android:id="@+id/button_00"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                app:cardCornerRadius="0dp"
+                app:cardElevation="0dp"
+                app:strokeColor="@color/o_x_icon_color"
+                app:strokeWidth="1dp">
+
+                <ImageView
+                    style="@style/x_o_btn_style"
+                    app:tint="@color/o_x_icon_color"
+                    tools:src="@drawable/ic_o" />
+            </com.google.android.material.card.MaterialCardView>
+
+            <com.google.android.material.card.MaterialCardView
+                android:id="@+id/button_01"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="-1dp"
+                app:cardCornerRadius="0dp"
+                app:cardElevation="0dp"
+                app:strokeColor="@color/o_x_icon_color"
+                app:strokeWidth="1dp">
+
+                <ImageView
+                    style="@style/x_o_btn_style"
+                    app:tint="@color/o_x_icon_color"
+                    tools:src="@drawable/ic_x" />
+            </com.google.android.material.card.MaterialCardView>
+
+            <com.google.android.material.card.MaterialCardView
+                android:id="@+id/button_02"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="-1dp"
+                app:cardCornerRadius="0dp"
+                app:cardElevation="0dp"
+                app:strokeColor="@color/o_x_icon_color"
+                app:strokeWidth="1dp">
+
+                <ImageView
+                    style="@style/x_o_btn_style"
+                    app:tint="@color/o_x_icon_color"
+                    tools:src="@drawable/ic_x" />
+            </com.google.android.material.card.MaterialCardView>
+        </LinearLayout>
+
+        <LinearLayout
+            android:id="@+id/row_2"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="-1dp"
+            android:clipChildren="false"
+            android:clipToPadding="false"
+            android:orientation="horizontal">
+
+            <com.google.android.material.card.MaterialCardView
+                android:id="@+id/button_10"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                app:cardCornerRadius="0dp"
+                app:cardElevation="0dp"
+                app:strokeColor="@color/o_x_icon_color"
+                app:strokeWidth="1dp">
+
+                <ImageView
+                    style="@style/x_o_btn_style"
+                    app:tint="@color/o_x_icon_color"
+                    tools:src="@drawable/ic_x" />
+            </com.google.android.material.card.MaterialCardView>
+
+            <com.google.android.material.card.MaterialCardView
+                android:id="@+id/button_11"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="-1dp"
+                app:cardCornerRadius="0dp"
+                app:cardElevation="0dp"
+                app:strokeColor="@color/o_x_icon_color"
+                app:strokeWidth="1dp">
+
+                <ImageView
+                    style="@style/x_o_btn_style"
+                    app:tint="@color/o_x_icon_color"
+                    tools:src="@drawable/ic_x" />
+            </com.google.android.material.card.MaterialCardView>
+
+            <com.google.android.material.card.MaterialCardView
+                android:id="@+id/button_12"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="-1dp"
+                app:cardCornerRadius="0dp"
+                app:cardElevation="0dp"
+                app:strokeColor="@color/o_x_icon_color"
+                app:strokeWidth="1dp">
+
+                <ImageView
+                    style="@style/x_o_btn_style"
+                    app:tint="@color/o_x_icon_color" />
+            </com.google.android.material.card.MaterialCardView>
+        </LinearLayout>
+
+        <LinearLayout
+            android:id="@+id/row_3"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="-1dp"
+            android:clipChildren="false"
+            android:clipToPadding="false"
+            android:orientation="horizontal">
+
+            <com.google.android.material.card.MaterialCardView
+                android:id="@+id/button_20"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                app:cardCornerRadius="0dp"
+                app:cardElevation="0dp"
+                app:strokeColor="@color/o_x_icon_color"
+                app:strokeWidth="1dp">
+
+                <ImageView
+                    style="@style/x_o_btn_style"
+                    app:tint="@color/o_x_icon_color" />
+            </com.google.android.material.card.MaterialCardView>
+
+            <com.google.android.material.card.MaterialCardView
+                android:id="@+id/button_21"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="-1dp"
+                app:cardCornerRadius="0dp"
+                app:cardElevation="0dp"
+                app:strokeColor="@color/o_x_icon_color"
+                app:strokeWidth="1dp">
+
+                <ImageView
+                    style="@style/x_o_btn_style"
+                    app:tint="@color/o_x_icon_color"
+                    tools:src="@drawable/ic_x" />
+            </com.google.android.material.card.MaterialCardView>
+
+            <com.google.android.material.card.MaterialCardView
+                android:id="@+id/button_22"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="-1dp"
+                app:cardCornerRadius="0dp"
+                app:cardElevation="0dp"
+                app:strokeColor="@color/o_x_icon_color"
+                app:strokeWidth="1dp">
+
+                <ImageView
+                    style="@style/x_o_btn_style"
+                    app:tint="@color/o_x_icon_color"
+                    tools:src="@drawable/ic_o" />
+            </com.google.android.material.card.MaterialCardView>
+        </LinearLayout>
+    </LinearLayout>
+
+</androidx.constraintlayout.widget.ConstraintLayout>

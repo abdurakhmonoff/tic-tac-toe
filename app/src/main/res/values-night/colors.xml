@@ -1,0 +1,18 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <color name="title_color">#8B82FF</color>
+    <color name="background_color">#121212</color>
+    <color name="white_background_color">#B3000000</color>
+    <color name="dark_background_color">#000000</color>
+    <color name="app_name_bg_start_color">#A29BFE</color>
+    <color name="app_name_bg_end_color">#74B9FF</color>
+    <color name="start_button_color">#55EFC4</color>
+    <color name="exit_button_color">#FAB1A0</color>
+    <color name="button_circle_bg_color">#171717</color>
+    <color name="welcome_screen_button_text_color">#171717</color>
+    <color name="app_name_color">#171717</color>
+    <color name="more_icon_bg_color">#14FFFFFF</color>
+    <color name="more_button_color">#CDCDCD</color>
+    <color name="o_x_icon_color">#C5C5C5</color>
+    <color name="game_board_bg_color">#14FFFFFF</color>
+</resources>

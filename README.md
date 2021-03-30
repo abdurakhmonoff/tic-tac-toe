@@ -1,5 +1,5 @@
 # Tic Tac Toe
-Tic Tac Toe is an Android app to play tic tac toe game. Users can play the game in single player mode and in multiplayer mode. The app supports Dark Mode.<br><br>
+Tic Tac Toe is an Android app to play the tic tac toe game. Users can play the game in single-player mode and in multiplayer mode. The app supports Dark Mode.<br><br>
 Technologies used:
 <p>
   <a href="#"><img src="https://img.shields.io/badge/Kotlin--_.svg?style=flat-square&logo=kotlin" alt="Kotlin"></a>
